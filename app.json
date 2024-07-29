@@ -3,16 +3,19 @@
     "name": "location-app",
     "slug": "location-app",
     "version": "1.0.0",
+    "main": "src/App.tsx",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "scheme": "location-app",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.joostschuur.locationapp"
     },
     "android": {
       "adaptiveIcon": {
@@ -21,7 +24,21 @@
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
-    }
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "829b6d75-495e-4352-91ac-731719a54477"
+      }
+    },
+    "owner": "jschuur",
+    "runtimeVersion": "0.0.1",
+    "updates": {
+      "url": "https://u.expo.dev/829b6d75-495e-4352-91ac-731719a54477"
+    },
+    "plugins": [
+      "expo-router"
+    ]
   }
 }
